@@ -16,7 +16,7 @@ Host    someinternalhost
         User kkisilevsky
         ProxyCommand ssh -A kkisilevsky@84.201.138.84 -W %h:%p
 
-# VPN
+# Open VPN
 # Установить сервер можно с помощью скрипта setupvpn.sh используя команду "sudo bash setupvpn.sh"
 # После успешной настройки сервера необходимо открыть назначеный порт (16270/udp) на сервере bastion 
 sudo iptables -A INPUT -p udp -m udp --dport 16270 -j ACCEPT 
