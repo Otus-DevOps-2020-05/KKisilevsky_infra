@@ -1,0 +1,14 @@
+{
+"builders": [
+{
+"type": "yandex",
+"service_account_key_file": "~/yandex_cloud_packer_key.json",
+"folder_id": "b1gu69dv199at7cel99f",
+"source_image_family": "ubuntu-1604-lts",
+"image_name": "reddit-base-{{timestamp}}",
+"image_family": "reddit-base",
+"ssh_username": "ubuntu",
+"platform_id": "standard-v1"
+}
+]
+}
