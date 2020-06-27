@@ -2,14 +2,14 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "/Users/konstantin.k/yandex_cloud_packer_key.json",
-            "folder_id": "b1gu69dv199at7cel99f",
-            "source_image_family": "ubuntu-1604-lts",
+            "service_account_key_file": "{{user `ycservice_account_key_file`}}",
+            "folder_id": "{{user `ycfolder_id`}}",
+            "source_image_family": "{{user `ycsource_image_family`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
-            "use_ipv4_nat" : "true"
+            "use_ipv4_nat" : "{{user `ycuse_ipv4_nat`}}"
         }
     ],
     "provisioners": [
