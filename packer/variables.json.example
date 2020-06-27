@@ -1,5 +1,6 @@
 {
     "ycfolder_id": "6fd5f5f86sd5f86df5",
     "ycsource_image_family": "ubuntu-1604-lts",
+    "ycservice_account_key_file": "key.json",
     "ycuse_ipv4_nat": "true"
 }
