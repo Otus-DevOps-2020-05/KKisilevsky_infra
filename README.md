@@ -28,3 +28,15 @@ someinternalhost_IP = 10.129.0.25
 
 testapp_IP = 84.201.159.109
 testapp_port = 9292
+
+# Создание образа packer необходимо описать в файле .json (примиер packer/immutable.json) 
+# Пример использования переменных для сборки образа - packer/variables.json.example
+# Проверка сборки 
+
+packer validate -var-file=variables.json ./immutable.json
+
+# Запуск сборки 
+
+packer build -var-file=variables.json ./immutable.json
+
+# Пример скрипта для запсука ВМ из созданного образа - cofig-scripts/create-reddit-vm.sh 
