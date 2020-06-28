@@ -6,7 +6,10 @@ echo "[Unit]" >> service
 echo "Description=Puma" >> service
 echo " " >> service
 echo "[Service]" >> service
-echo "ExecStart=/usr/local/bin/puma -d" >> service
+echo "ExecStart=/usr/local/bin/puma -C /home/ubuntu/reddit/config/deploy/production.rb --pidfile /home/ubuntu/reddit/puma.pid -e production" >> service
+echo "WorkingDirectory=/home/ubuntu/reddit" >> service
+echo "Restart=always" >> service
+echo "KillMode=process" >> service
 echo " " >> service
 echo "[Install]" >> service
 echo "WantedBy=multi-user.target" >> service
