@@ -1,0 +1,8 @@
+cloud_id                 = "gfdfgdsfg67df6g8sdfg"
+folder_id                = "dsfgefgdsf67g6dfgdf6"
+zone                     = "ru-central1-a"
+image_id                 = "sfg6fgsd6f56sdfdff68"
+public_key_path          = "~/.ssh/user.pub"
+private_key_path         = "~/.ssh/user"
+subnet_id                = "86dfgsdfs86g6sdf65gds"
+service_account_key_file = "~/key.json"
