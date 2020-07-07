@@ -1,6 +1,4 @@
-# KKisilevsky_infra
-KKisilevsky Infra repository
-
+# KKisilevsky_infra repository
 # Bastion host SSH forwarding with alias for destination host
 # Необходимо сгенерировать ssh key для подключения к серверу
 
@@ -40,3 +38,23 @@ packer validate -var-file=variables.json ./immutable.json
 packer build -var-file=variables.json ./immutable.json
 
 # Пример скрипта для запсука ВМ из созданного образа - cofig-scripts/create-reddit-vm.sh 
+# Описание основого инстанса 
+
+terraform/main.tf
+
+# Объявление input переменных
+
+terraform/variables.tf
+
+# Пример описанных input переменных 
+
+terraform/terraform.tfvars.example
+
+# Output переменные 
+
+terraform/output.tf 
+
+# Основные команды 
+terraform plan\apply
+
+terraform destroy
