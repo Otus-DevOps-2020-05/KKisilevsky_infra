@@ -1,6 +1,6 @@
-#terraform {
-#  required_version = " ~> 0.12.8"
-#}
+terraform {
+  required_version = " ~> 0.12.8"
+}
 
 provider "yandex" {
   service_account_key_file = var.service_account_key_file
@@ -13,30 +13,34 @@ module "app" {
   source          = "../modules/app"
   public_key_path = var.public_key_path
   app_disk_image  = var.app_disk_image
-  subnet_id       = var.subnet_id
+  subnet_id       = module.vpc.vm_subnet_id
 }
 
 module "db" {
   source          = "../modules/db"
   public_key_path = var.public_key_path
   db_disk_image   = var.db_disk_image
-  subnet_id       = var.subnet_id
+  subnet_id       = module.vpc.vm_subnet_id
 }
-# connection {
-#   type  = "ssh"
-#   host  = self.network_interface.0.nat_ip_address
-#   user  = "ubuntu"
-#   agent = false
-#   # путь до приватного ключа
-#   private_key = file(var.private_key_path)
-# }
 
-# provisioner "file" {
-#   source      = "files/puma.service"
-#   destination = "/tmp/puma.service"
-# }
+module "vpc" {
+  source          = "../modules/vpc"
+}
+ # connection {
+ #   type  = "ssh"
+ #   host  = self.network_interface.0.nat_ip_address
+ #   user  = "ubuntu"
+ #   agent = false
+ #   # путь до приватного ключа
+ #   private_key = file(var.private_key_path)
+ # }
 
-# provisioner "remote-exec" {
-#   script = "files/deploy.sh"
-# }
+ # provisioner "file" {
+ #   source      = "files/puma.service"
+ #   destination = "/tmp/puma.service"
+ # }
+
+ # provisioner "remote-exec" {
+ #   script = "files/deploy.sh"
+ # }
 #}
