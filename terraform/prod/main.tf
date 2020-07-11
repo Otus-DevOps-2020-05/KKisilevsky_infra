@@ -24,7 +24,7 @@ module "db" {
 }
 
 module "vpc" {
-  source          = "../modules/vpc"
+  source = "../modules/vpc"
 }
 # connection {
 #   type  = "ssh"

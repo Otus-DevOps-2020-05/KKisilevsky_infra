@@ -24,23 +24,23 @@ module "db" {
 }
 
 module "vpc" {
-  source          = "../modules/vpc"
+  source = "../modules/vpc"
 }
- # connection {
- #   type  = "ssh"
- #   host  = self.network_interface.0.nat_ip_address
- #   user  = "ubuntu"
- #   agent = false
- #   # путь до приватного ключа
- #   private_key = file(var.private_key_path)
- # }
+# connection {
+#   type  = "ssh"
+#   host  = self.network_interface.0.nat_ip_address
+#   user  = "ubuntu"
+#   agent = false
+#   # путь до приватного ключа
+#   private_key = file(var.private_key_path)
+# }
 
- # provisioner "file" {
- #   source      = "files/puma.service"
- #   destination = "/tmp/puma.service"
- # }
+# provisioner "file" {
+#   source      = "files/puma.service"
+#   destination = "/tmp/puma.service"
+# }
 
- # provisioner "remote-exec" {
- #   script = "files/deploy.sh"
- # }
+# provisioner "remote-exec" {
+#   script = "files/deploy.sh"
+# }
 #}
