@@ -54,7 +54,20 @@ terraform/terraform.tfvars.example
 
 terraform/output.tf 
 
+# Для хранения файла состояние необходимо создать бакет и описать backend 
+
+terraform/stage/backend.tf
+
+# После описания backend необходима инициализация
+
+terraform init
+
+# Для загрузки модулей, после указания в main.tf их необходимо загрузить
+
+terrafrom get
+
 # Основные команды 
+
 terraform plan\apply
 
 terraform destroy
