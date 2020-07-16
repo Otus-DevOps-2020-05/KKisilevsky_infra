@@ -71,3 +71,18 @@ terrafrom get
 terraform plan\apply
 
 terraform destroy
+
+# Ansible
+# Пример описания inventory
+
+ansible/inventory.yml
+
+# Использование модулей
+
+ansible app -m shell/systemd/service/git -a "{command}"
+
+# Пример написания плейбука 
+
+ansible/clone.yml
+
+# Отличие выполнение модуля  и команды заключается в идемпотентности, модуль не будет повторно пытаться применить изменения, если они уже осуществлены.
