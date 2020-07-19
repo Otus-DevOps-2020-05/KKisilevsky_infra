@@ -92,4 +92,4 @@ ansible/clone.yml
 ansible-playbook reddit_app.yml --check --limit app --tags deploy-tag
 
 * Примеры ansible/*
-  
+
