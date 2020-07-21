@@ -5,18 +5,25 @@
             "service_account_key_file": "{{user `ycservice_account_key_file`}}",
             "folder_id": "{{user `ycfolder_id`}}",
             "source_image_family": "{{user `ycsource_image_family`}}",
-            "image_name": "reddit-app-base-{{timestamp}}",
-            "image_family": "reddit-app-base",
+            "image_name": "reddit-app-ansible-base-{{timestamp}}",
+            "image_family": "reddit-app-ansible-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
             "use_ipv4_nat" : "{{user `ycuse_ipv4_nat`}}"
         }
     ],
+    
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_ruby.sh",
+            "script": "packer/scripts/fix_fucking_error.sh",
             "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "ansible",
+            "playbook_file": "ansible/packer_app.yml"
         }
+
+
     ]
 }

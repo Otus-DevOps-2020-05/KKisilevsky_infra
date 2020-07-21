@@ -86,3 +86,10 @@ ansible app -m shell/systemd/service/git -a "{command}"
 ansible/clone.yml
 
 # Отличие выполнение модуля  и команды заключается в идемпотентности, модуль не будет повторно пытаться применить изменения, если они уже осуществлены.
+
+* Для проверки используется аргумент --check, для указания группы хостов к которым будет применяться play book --limit, --tags для срабатывания тасков с указанным тегом  
+
+ansible-playbook reddit_app.yml --check --limit app --tags deploy-tag
+
+* Примеры ansible/*
+
