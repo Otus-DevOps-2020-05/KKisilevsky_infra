@@ -6,3 +6,5 @@ variables.json
 .terraform/
 *.retry
 .DS_Store
+jdauphant.nginx
+vault.key
