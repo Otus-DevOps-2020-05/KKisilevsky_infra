@@ -8,7 +8,7 @@
   apt:
    name: git
    update_cache: yes
-   
+
 - name: Add unit file for Puma
   copy:
     src: puma.service
