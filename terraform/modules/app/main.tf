@@ -43,9 +43,9 @@ connection {
   #  destination = "/tmp/deploy.sh"
   #}
   
-  provisioner "remote-exec" {
-    inline = ["sudo apt-get install -y git"]
-  }
+  #provisioner "remote-exec" {
+  #  inline = ["sudo apt-get install -y git"]
+  #}
 
   #provisioner "remote-exec" {
   #  inline = [

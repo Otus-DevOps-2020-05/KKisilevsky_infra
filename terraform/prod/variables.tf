@@ -27,7 +27,6 @@ variable image_id {
 variable subnet_id {
   description = "Subnet"
 }
-
 variable service_account_key_file {
   description = "key .json"
 }

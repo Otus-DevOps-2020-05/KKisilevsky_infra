@@ -5,3 +5,6 @@ variables.json
 *.tfvars
 .terraform/
 *.retry
+.DS_Store
+jdauphant.nginx
+vault.key
