@@ -143,3 +143,21 @@ ansible-vault encrypt/decrypt/edit environments/prod/credentials.yml
 [defaults]
 inventory = ./environments/prod/inventory.sh
 ```
+
+ansible-lint playbooks/site.yml
+
+vagrant up/halt/destroy
+
+vagrant box list
+
+vagrant status
+
+vagrant provision dbserver
+
+vagrant ssh appserver
+
+Vagrant inventory
+
+cat .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
+
+pip install molecule-vagrant

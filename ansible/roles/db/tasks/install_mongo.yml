@@ -4,22 +4,22 @@
   apt_key:
     id: EA312927
     keyserver: keyserver.ubuntu.com
-  tags: install  
+  tags: install
 
 # Подключаем репозиторий с пакетами mongodb
 - name: Add APT repository
   apt_repository:
     repo: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse
     state: present
-  tags: install  
+  tags: install
 
 # Выполним установку пакета
 - name: Install mongodb package
   apt:
-    allow_unauthenticated: yes   
+    allow_unauthenticated: yes
     name: mongodb-org
     state: present
-  tags: install  
+  tags: install
 
 # Включаем сервис
 - name: Configure service supervisor
@@ -27,4 +27,4 @@
     name: mongod
     enabled: yes
     state: started
-  tags: install  
+  tags: install
