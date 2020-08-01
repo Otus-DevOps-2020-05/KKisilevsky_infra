@@ -143,21 +143,25 @@ ansible-vault encrypt/decrypt/edit environments/prod/credentials.yml
 [defaults]
 inventory = ./environments/prod/inventory.sh
 ```
-
+### Проверка yaml на отступы 
+```
 ansible-lint playbooks/site.yml
+```
 
-vagrant up/halt/destroy
+## Vagrant 
+```
+vagrant up/halt/destroy # Запустить/Потушить/Убить
 
-vagrant box list
+vagrant box list # Список боксов
 
-vagrant status
+vagrant status # Статус ВМ
 
-vagrant provision dbserver
+vagrant provision dbserver # Запустить провижинеров конкретного инстанса 
 
-vagrant ssh appserver
-
-Vagrant inventory
+vagrant ssh appserver # Подключиться по ssh 
+```
+## Vagrant inventory
 
 cat .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
 
-pip install molecule-vagrant
+pip install molecule-vagrant # Добавления драйвера vagrant 
